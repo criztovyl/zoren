@@ -1,0 +1,261 @@
+/*
+Theme Name: Zoren
+*/
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+
+/* =Reset
+----------------------------------------------- */
+
+caption, th, td {
+	text-align: right;
+}
+
+
+/* =Font
+----------------------------------------------- */
+
+ul,
+ol {
+	margin: 0 3em 1.5em 0;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+	margin-left: 0;
+	margin-right: 1.5em;
+}
+dd {
+	margin: 0 0 1.5em 1.5em;
+}
+blockquote {
+	margin: 0 0 1.5em;
+	border-left: 0;
+	border-right: 5px solid #E6EDCE;
+	padding-left: 0;
+	padding-right: 1.5em;
+}
+
+
+/* =Navigation
+----------------------------------------------- */
+.navigation-paging .previous,
+.navigation-post .previous,
+.navigation-image .previous {
+	float: right;
+	width: 50%;
+}
+.navigation-paging .next,
+.navigation-post .next,
+.navigation-image .next {
+	float: right;
+	text-align: left;
+}
+
+
+/* =Grid
+-------------------------------------------------------------- */
+
+#page {
+	margin: 0 auto;
+	padding-left: 0;
+	padding-right: 20px;
+}
+#masthead,
+.site-branding,
+.site-image,
+#secondary,
+.thickline,
+#colophon,
+.main-navigation,
+#primary {
+	float: right;
+	margin-left: 0;
+	margin-right: 20px;
+}
+#masthead,
+.site-branding,
+.site-image,
+.thickline,
+#colophon,
+#primary {
+	margin-right: 0;
+}
+
+
+/* =Menu
+-------------------------------------------------------------- */
+
+.main-navigation li {
+	float: right;
+}
+.main-navigation ul ul {
+	float: right;
+	left: auto;
+	right: 0;
+}
+.main-navigation ul ul:before {
+	left: auto;
+	right: 10px;
+}
+.main-navigation ul ul ul {
+	left: auto;
+	right: 100%;
+}
+
+
+/* =Post & Pages
+-------------------------------------------------------------- */
+
+.author-meta,
+.clock-meta,
+.category-meta,
+.discussion-meta {
+	float: right;
+	margin-right: 0;
+	margin-left: 20px;
+	padding-left: 0;
+	padding-right: 30px;
+	background-position: top right;
+}
+.taglist ul li {
+	float: right;
+	margin: 0 0 5px 5px;
+}
+
+
+/* =Widgets
+-------------------------------------------------------------- */
+
+.widget_categories ul ul,
+.widget_nav_menu ul ul,
+.widget_pages ul ul {
+	margin-left: 0;
+	margin-right: 0;
+}
+.widget_categories ul ul ul,
+.widget_nav_menu ul ul ul,
+.widget_pages ul ul ul {
+	margin-left: 0;
+	margin-right: -20px;
+}
+.widget_categories .children li,
+.widget_nav_menu .sub-menu li,
+.widget_pages .children li {
+	padding-left: 0;
+	padding-right: 20px;
+}
+.widget_categories .children .children li,
+.widget_nav_menu .sub-menu .sub-menu li,
+.widget_pages .children .children li {
+	padding-left: 0;
+	padding-right: 40px;
+}
+.widget_links li a img {
+	float: right;
+	margin-right: 0;
+	margin-left: 20px;
+}
+.widget_recent_images a {
+	float: right;
+}
+.widgets-multi-column-grid .avatar {
+	margin-right: auto;
+	margin-left: 0;
+}
+
+
+/* =Comments
+-------------------------------------------------------------- */
+
+.comment-avatar {
+	float: right;
+	margin-right: 0;
+	margin-left: 20px;
+}
+img.avatar {
+	float: right;
+	margin-right: 0;
+	margin-left: 20px;
+}
+ol.commentlist li ul.children {
+	margin: 0 40px 40px 0;
+	padding-right: 0;
+	padding-left: 40px;
+}
+#respond input {
+	margin: 0 0 10px 10px;
+}
+
+
+/* =Post Format
+----------------------------------------------- */
+
+.entry-format-badge {
+	float: right;
+	margin-right: 0;
+	margin-left: 40px;
+}
+
+
+/* =Responsive
+----------------------------------------------- */
+
+/* 767px < x < 960px */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+	/* Comments */
+	ol.commentlist li ul.children {
+		margin: 0 20px 20px 0;
+		padding-right: 0;
+		padding-left: 20px;
+	}
+
+	/* Entry meta */
+	.author-meta,
+	.clock-meta,
+	.category-meta,
+	.discussion-meta {
+		padding-left: 0;
+		padding-right: 10%;
+	}
+
+}
+
+/* 768px > x */
+@media only screen and (max-width: 767px) {
+
+	/* Grid */
+	#page {
+		padding: 0;
+	}
+	#masthead,
+	.site-image,
+	.thickline,
+	#colophon,
+	.error404 #primary,
+	.page-template-page-templatesfull-width-php #primary,
+	.site-branding,
+	.main-navigation,
+	#secondary,
+	#primary {
+		margin-right: 0;
+	}
+
+	/* Entry meta */
+	.author-meta,
+	.clock-meta,
+	.category-meta,
+	.discussion-meta {
+		margin-right: 0;
+		margin-left: 0;
+		padding-left: 0;
+		padding-right: 10%
+	}
+
+}
