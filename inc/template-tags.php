@@ -35,17 +35,18 @@ function zoren_content_nav( $nav_id ) {
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '<div class="previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'zoren' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'zoren' ) . '</span>' ); ?>
+		<?php next_post_link( '<div class="next">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Next post link', 'zoren' ) . '</span> %title' ); ?>
+		<?php previous_post_link( '<div class="previous">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Previous post link', 'zoren' ) . '</span>'  ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
-		<?php if ( get_next_posts_link() ) : ?>
-		<div class="previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'zoren' ) ); ?></div>
-		<?php endif; ?>
 
 		<?php if ( get_previous_posts_link() ) : ?>
-		<div class="next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'zoren' ) ); ?></div>
+    	<div class="next"><?php previous_posts_link( __( '<span class="meta-nav">&larr;</span> Newer Posts', 'zoren' ) ); ?></div>
+		<?php endif; ?>
+
+        <?php if ( get_next_posts_link() ) : ?>
+		<div class="previous"><?php next_posts_link( __( 'Older Posts <span class="meta-nav">&rarr;</span>', 'zoren' ) ); ?></div>
 		<?php endif; ?>
 
 	<?php endif; ?>

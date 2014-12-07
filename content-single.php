@@ -8,6 +8,11 @@ $formats = get_theme_support( 'post-formats' );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php if ( '' != get_the_post_thumbnail() ) : ?>
+		<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'zoren' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="<?php the_ID(); ?>" class="featured-thumbnail">
+			<?php the_post_thumbnail( 'featured-thumbnail', array( 'class' => 'postimg responsive', ) ); ?>
+		</a>
+	<?php endif; ?>
 
 	<?php if ( 'post' == get_post_type() ) : ?>
 	<div class="entry-meta clear">
@@ -26,13 +31,13 @@ $formats = get_theme_support( 'post-formats' );
 			<p><?php _e( 'Posted on', 'zoren' ); ?></p>
 			<span><a href="<?php echo get_day_link( get_the_time( 'Y' ), get_the_time( 'm' ), get_the_time( 'd' ) ); ?>" rel="bookmark" title="<?php the_time(); ?>"><?php the_time( get_option( 'date_format' ) ); ?></a></span>
 		</div>
-		<div class="category-meta">
-			<p><?php _e( 'Posted under', 'zoren' ); ?></p>
-			<span> <?php the_category(', '); ?></span>
-		</div>
 		<div class="discussion-meta">
 			<p><?php _e( 'Comments', 'zoren' ); ?></p>
 			<span><?php comments_popup_link( __('Leave a Comment', 'zoren'), __('1 Comment', 'zoren'), __('% Comments', 'zoren') ); ?></span>
+		</div>
+		<div class="category-meta">
+			<p><?php _e( 'Posted under', 'zoren' ); ?></p>
+			<span> <?php the_category(', '); ?></span>
 		</div>
 	</div><!-- .entry-meta -->
 	<?php endif; ?>

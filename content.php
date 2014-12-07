@@ -9,7 +9,7 @@ $formats = get_theme_support( 'post-formats' );
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php if ( '' != get_the_post_thumbnail() && '' == $format ) : ?>
+	<?php if ( '' != get_the_post_thumbnail() ) : ?>
 		<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'zoren' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="<?php the_ID(); ?>" class="featured-thumbnail">
 			<?php the_post_thumbnail( 'featured-thumbnail', array( 'class' => 'postimg responsive', ) ); ?>
 		</a>
@@ -60,6 +60,11 @@ $formats = get_theme_support( 'post-formats' );
 				'link_after'  => '</span>'
 			) );
 		?>
+        <?php
+        if( get_the_tag_list() )
+            echo get_the_tag_list( '<div class="taglist"><ul class="clear"><li>','</li><li>','</li></ul></div' );
+        ?>
+
 		<?php edit_post_link( __( 'Edit', 'zoren' ), '<p class="edit-link">', '</p>' ); ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>

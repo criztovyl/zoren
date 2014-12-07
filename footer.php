@@ -15,7 +15,8 @@
 			<?php do_action( 'zoren_credits' ); ?>
 			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'zoren' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'zoren' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'zoren' ), 'Zoren', '<a href="http://www.fabthemes.com/" rel="designer">FabThemes</a>' ); ?>
+			<a href="http://www.fabthemes.com/" rel="designer"><?php printf( __( 'Theme: %1$s by %2$s.', 'zoren' ), 'Zoren', 'FabThemes' ); ?></a><br>
+			<a href="/blog/changelog">Some modifications by me, see Changelog</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

@@ -261,6 +261,7 @@ tt,
 var {
 	font-family: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
 	font-size: 13px;
+    background: #eee;
 }
 abbr,
 acronym {
@@ -629,14 +630,14 @@ video,
 .navigation-paging .previous,
 .navigation-post .previous,
 .navigation-image .previous {
-	float: left;
+	float: right;
+	text-align: right;
 	width: 50%;
 }
 .navigation-paging .next,
 .navigation-post .next,
 .navigation-image .next {
-	float: right;
-	text-align: right;
+	float: left;
 	width: 50%;
 }
 
@@ -1662,7 +1663,7 @@ a.entry-format-badge:hover {
 	.clock-meta,
 	.category-meta,
 	.discussion-meta {
-		width: 128px;
+		width: 306px;
 	}
 
 	/* Search */
